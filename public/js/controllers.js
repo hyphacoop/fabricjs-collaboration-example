@@ -98,27 +98,31 @@ angular.module('fabricApp.controllers', [])
                 height: 100,
                 originX: 'center',
                 originY: 'center',
+                selectable: false,
                 id: 0
             }),
 
-            new fabric.Circle({
-                left: 220,
+            new fabric.Rect({
+                left: 520,
                 top: 120,
                 fill: '#e74c3c',
-                radius: 50,
+                width: 100,
+                height: 100,
                 originX: 'center',
                 originY: 'center',
+                selectable: false,
                 id: 1
             }),
             
             new fabric.Triangle({
                 left: 340,
-                top: 120,
+                top: 420,
                 fill: '#9b59b6',
                 width: 100,
                 height: 100,
                 originX: 'center',
                 originY: 'center',
+                selectable: false,
                 id: 2
             }),
             new fabric.Text('Everything Responsive', {

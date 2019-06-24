@@ -19,7 +19,7 @@ module.exports = function (app) {
             },
             obj1:
             {
-                type: 'circle',
+                type: 'rectangle',
                 color: '#00FF00',
                 left: 200,
                 top: 0,
