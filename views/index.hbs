@@ -34,7 +34,7 @@
 
 </div>
 
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top ng-scope">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -52,37 +52,7 @@
         </div>
     </nav>
 
-    <div class="splash">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <h1>FabricJS Collaboration Example</h1>
-                    <h2>Made with NodeJs, Express, AngularJs and Socket.io</h2>
-                    <p><a class="btn btn-primary btn-lg" href="https://github.com/nyozz/fabricjs-collaboration-example" target="_blank">Learn more</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
     <div ng-view id="mainView"></div>
-
-    <footer class="main-footer ng-scope">
-        <div class="inner-container clearfix">
-            <div>
-                <h3>Made with <i class="fa fa-heart"></i> at InApp.</h3>
-            </div>
-            <nav class="footer-block">
-                <a href="http://www.inapp.eu/articles" target="_blank">Development Blog</a>
-                <a href="mailto:henry@inapp.eu">Contact</a>
-            </nav>
-            <nav class="footer-block">
-                <a class="social tw" href="http://twitter.com/gamodogames" target="_blank"> <i class="fa fa-twitter"></i> </a>
-                <a class="social fb" href="http://facebook.com/gamodo.eu" target="_blank"> <i class="fa fa-facebook"></i> </a>
-                <a href="http://www.henrykeller.eu" target="_blank">Copyright © 2015 Henry Keller.</a>
-            </nav>
-        </div>
-    </footer>
 
     <script src="bower_components/socket.io-client/socket.io.js"></script>
     <script src="bower_components/fabric.js/dist/fabric.min.js"></script>
