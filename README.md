@@ -14,6 +14,11 @@ consuming visual attention.
     width="500"
     alt="Screencast of usage" />
 </p>
+<p align="center">
+  <sup>
+    (Nevermind the "Everything Responsive" text: Was just for testing text placement.)
+  </sup>
+</p>
 
 
 ## :hammer_and_wrench: Technologies Used
