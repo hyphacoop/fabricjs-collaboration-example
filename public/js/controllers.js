@@ -191,7 +191,7 @@ angular.module('fabricApp.controllers', [])
         homeCtrl.addRectangle = $('#addRectangle');
         homeCtrl.addRectangle.on('mousedown', function(event) {
             homeCtrl.lockDrag = true;
-            homeCtrl.dragObject = $('<div class="addRectangle"></div>');
+            homeCtrl.dragObject = $('<div class="addRectangle">🆕</div>');
             homeCtrl.dragObject.css('position', 'fixed');
             homeCtrl.dragObject.css('top', event.clientY);
             homeCtrl.dragObject.css('left', event.clientX);

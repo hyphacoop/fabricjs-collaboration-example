@@ -413,12 +413,23 @@ footer.main-footer a.social > i {
     }
 }
 
+.agree {
+    color: #2ecc71;
+}
+
+.disagree {
+    color: #e74c3c;
+}
+
+.unsure {
+    color: #9b59b6;
+}
 
 
 #addRectangle, .addRectangle {
     cursor: all-scroll;
     padding: 20px;
-    background: #2ecc71;
+    font-size: 50px;
     height: 50px;
     width: 50px;
     margin: 20px;
