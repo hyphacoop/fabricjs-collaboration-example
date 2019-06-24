@@ -1,20 +1,31 @@
-# FabricJS Collaboration Example
+# Hypha Collab Board
 
-This is a proof-of-concept app I wrote using AngularJS + FabricJS + Socket.io + Express to test out collaboration possibilities with FabricJS.
-It is a very Basic App with a limited feature set but is a good starting point for your own awesome Apps.
+:link: [`hyphacoop-collab-board.herokuapp.com`][app]
 
-This Example shows you how to create a real time canvas, display the current User editing objects on it, keeping every object between boundaries even while scaling and techniques for some performance issues. Instead of sending position updates on every change I chose a more performance friendly method.
+The purpose of this small app is to help us understand our alignment
+during meetings, even when we can't see one another's faces or read body
+language. It's designed to be easy to use continuously on mobile phone, without
+consuming visual attention.
 
-I also implemented some Responsive features, so this Example should run fine on mobile devices. I made the FabricJS canvas completely responsive. As said before, this is just proof-of-concept so a lot of features are missing and some parts may not be best practice.
+   [app]: https://hyphacoop-collab-board.herokuapp.com/
 
-![alt text](screenshots/main_screen.jpg "Main Screen")
+<p align="center">
+  <img src="https://i.imgur.com/1kMhHWi.gif"
+    width="500"
+    alt="Screencast of usage" />
+</p>
 
-## Live Demo
-Live Demo is hosted on Heroku
 
-[Live Demo](https://fabricjs-collaboration.herokuapp.com/)
+## :hammer_and_wrench: Technologies Used
 
-## How to use it
+- Websockets (Socket.io)
+- Heroku
+- Bootstrap
+- Javascript
+  - Angular
+  - FabricJS
+
+## :computer: Local Development
 
 Clone this repository and run the following shell commands afterwards:
 
@@ -22,45 +33,12 @@ Clone this repository and run the following shell commands afterwards:
 npm install
 ```
 
-### Running the app
-
 Run the following shell commands:
 
 ```shell
 node app.js
 ```
 
-## Contact
+## :copyright: License
 
-For more information on AngularJS please check out http://angularjs.org/
-For more on FabricJS and Socket.io, http://fabricjs.com/ and http://socket.io/ are
-your friends.
-
-If you want more example Apps regarding AngularJS and lots of other stuff you can visit my homepage:
-http://www.virtualgeek.eu
-
-## License
-
-    The MIT License (MIT)
-
-    Copyright (c) 2015 Henry Keller <henry@virtualgeek.eu>
-
-    Permission is hereby granted, free of charge, to any person obtaining a copy
-    of this software and associated documentation files (the "Software"), to deal
-    in the Software without restriction, including without limitation the rights
-    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-    copies of the Software, and to permit persons to whom the Software is
-    furnished to do so, subject to the following conditions:
-
-    The above copyright notice and this permission notice shall be included in
-    all copies or substantial portions of the Software.
-
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-    THE SOFTWARE.
-
-
+[MIT](/LICENSE)
