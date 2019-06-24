@@ -142,15 +142,19 @@ angular.module('fabricApp.controllers', [])
         });
         
         //add image from url
-        fabric.Image.fromURL('images/icons/user.png', function(oImg) {
-            oImg.id = 4;
-            
-            oImg.originX = 'center';
-            oImg.originY = 'center';
-            
+        fabric.Image.fromURL('https://robohash.org/user.png?set=set4&size=50x50', function(oImg) {
             oImg.left = 460;
             oImg.top = 120;
-            
+            oImg.originX = 'center';
+            oImg.originY = 'center';
+            oImg.id = 4;
+
+            oImg.lockScalingY = true;
+            oImg.lockScalingX = true;
+            oImg.lockRotation = true;
+            oImg.hasBorders = false;
+            oImg.hasControls = false;
+
             $scope.objList.push(oImg);
             $scope.canvas.add(oImg);
         });
@@ -226,45 +230,53 @@ angular.module('fabricApp.controllers', [])
         console.log(left);
         console.log(top);
 
-        var rectangle = new fabric.Rect({
-            left: left,
-            top: +top,
-            fill: '#2ecc71',
-            width: 50,
-            height: 50,
-            originX: 'center',
-            originY: 'center',
-            id: id
+        var username = commonData.Name;
+        fabric.Image.fromURL(`https://robohash.org/${username}.png?set=set4&size=50x50`, function(oImg) {
+            oImg.left = left;
+            oImg.top = +top;
+            oImg.originX = 'center';
+            oImg.originY = 'center';
+            oImg.id = id;
+
+            oImg.lockScalingY = true;
+            oImg.lockScalingX = true;
+            oImg.lockRotation = true;
+            oImg.hasBorders = false;
+            oImg.hasControls = false;
+
+            socketFactory.emit('addRectangle', {
+                username: username,
+                left: left,
+                top: +top,
+                id: id
+            });
+            $scope.objList.push(oImg);
+            $scope.canvas.add(oImg);
+            $scope.canvas.renderAll();
         });
 
-        socketFactory.emit('addRectangle', {
-            left: left,
-            top: +top,
-            id: id
-        });
-        $scope.objList.push(rectangle);
-        $scope.canvas.add(rectangle);
-        $scope.canvas.renderAll();
     };
 
     homeCtrl.onAddRectangle = function(data) {
+        fabric.Image.fromURL(`https://robohash.org/${data.username}.png?set=set4&size=50x50`, function(oImg) {
+            oImg.left = data.left;
+            oImg.top = data.top;
+            oImg.originX = 'center';
+            oImg.originY = 'center';
+            oImg.id = data.id;
 
-        var rectangle = new fabric.Rect({
-            left: data.left,
-            top: data.top,
-            fill: '#2ecc71',
-            width: 50,
-            height: 50,
-            originX: 'center',
-            originY: 'center',
-            id: data.id
+            oImg.lockScalingY = true;
+            oImg.lockScalingX = true;
+            oImg.lockRotation = true;
+            oImg.hasBorders = false;
+            oImg.hasControls = false;
+
+            $scope.objList.push(oImg);
+            $scope.canvas.add(oImg);
+            $scope.canvas.renderAll();
         });
-
-        $scope.objList.push(rectangle);
-        $scope.canvas.add(rectangle);
-        $scope.canvas.renderAll();
     };
-    
+
     /**
      * Tell all clients we stopped modifying
      * 
