@@ -10,8 +10,8 @@ RUN addgroup --system app \
 
 USER app
 WORKDIR /app
-COPY package.json npm-shrinkwrap.json bower.json .bowerrc .
-RUN npm install
+COPY package.json package-lock.json bower.json .bowerrc .
+RUN npm ci
 COPY . .
 
 USER root
