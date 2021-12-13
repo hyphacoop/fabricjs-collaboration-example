@@ -1,18 +1,23 @@
-FROM node:4.2.1-slim
+FROM node:8.17.0-alpine
 
-RUN apt-get update && apt-get install git --yes
+RUN apk update \
+  && apk add --no-cache --virtual .build-deps git
 
 # Allow npm to run postinstall script even though root
 # See: https://stackoverflow.com/a/47748545
-RUN groupadd -r app && useradd -r --create-home -g app app
+RUN addgroup --system app \
+  && adduser --system --home /home/app --ingroup app app
+
 USER app
-
 WORKDIR /app
-
 COPY package.json npm-shrinkwrap.json bower.json .bowerrc .
 RUN npm install
 COPY . .
 
+USER root
+RUN apk del .build-deps
+
 EXPOSE 3000
 
+USER app
 CMD node app.js
