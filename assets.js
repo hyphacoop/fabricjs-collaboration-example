@@ -8,7 +8,7 @@ const JS = [
   //'socket.io-client/socket.io.js',
   //'fabric.js/dist/fabric.min.js',
   'angular/angular.min.js',
-  //'angular-route/angular-route.min.js',
+  'angular-route/angular-route.min.js',
   //'jquery/dist/jquery.min.js',
   //'bootstrap/dist/js/bootstrap.min.js',
 ];

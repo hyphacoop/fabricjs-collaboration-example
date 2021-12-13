@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "angular": "1.4.7",
+    "angular-route": "1.4.7",
     "body-parser": "^1.14.1",
     "errorhandler": "^1.4.2",
     "express": "^4.13.3",
@@ -24,10 +25,9 @@
     "node": "4.2.1"
   },
   "scripts": {
-    "build": "npm run build:dev",
+    "build": "npm run build:dev && bower install",
     "build:dev": "webpack --mode=development",
-    "build:prod": "webpack --mode=production",
-    "postinstall": "npm run build"
+    "build:prod": "webpack --mode=production"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^6.4.1",

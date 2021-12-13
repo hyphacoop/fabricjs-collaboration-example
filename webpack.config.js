@@ -15,7 +15,7 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: Assets.map(asset => ({
         from: `node_modules/${asset}`,
-        to: 'public/bower_components/',
+        to: 'public/npm/',
       })),
     })
   ]
