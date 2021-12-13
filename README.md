@@ -1,5 +1,10 @@
 # Hypha Collab Board
 
+<!-- Changes to badge text in URLs below, require changes to "name" value in .github/workflows/*.yml -->
+[![Docker Build](https://github.com/patcon/hyphacoop-collab-board/workflows/Docker%20build/badge.svg)][docker-build]
+
+   [docker-build]: https://github.com/patcon/hyphacoop-collab-board/actions?query=workflow%3A%22Docker+build%22
+
 :link: [`hyphacoop-collab-board.herokuapp.com`][app]
 
 The purpose of this small app is to help us understand our alignment
