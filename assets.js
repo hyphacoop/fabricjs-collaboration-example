@@ -5,7 +5,7 @@ const CSS = [
 ];
 
 const JS = [
-  //'socket.io-client/socket.io.js',
+  'socket.io-client/dist/socket.io.min.js',
   //'fabric.js/dist/fabric.min.js',
   'angular/angular.min.js',
   'angular-route/angular-route.min.js',
