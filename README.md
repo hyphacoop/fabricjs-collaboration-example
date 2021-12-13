@@ -34,10 +34,21 @@ consuming visual attention.
 - Javascript
   - Angular
   - FabricJS
+  - BowerJS
+- Docker
+  - Docker Compose
+- GitHub Actions
 
-## :computer: Local Development
+## :computer: Development
 
-Clone this repository and run the following shell commands afterwards:
+Clone this repository and run the app either:
+- locally (directly on your workstation), or
+- using Docker (in a virtualized container environment).
+
+After running the commands below, visit: `http://localhost:3000`
+
+### Local Development
+
 
 ```shell
 npm install
@@ -47,6 +58,12 @@ Run the following shell commands:
 
 ```shell
 node app.js
+```
+
+### Docker Development
+
+```shell
+docker-compose up --detach
 ```
 
 ## :copyright: License
