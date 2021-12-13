@@ -2,7 +2,6 @@
   "name": "fabricjs-collaboration-example",
   "description": "AngularJs Realtime Canvas with FabricJS and Socket.io",
   "version": "0.0.0",
-  "directory": "public/bower_components",
   "ignore": [
     "**/.*",
     "node_modules",

@@ -9,7 +9,7 @@ USER app
 
 WORKDIR /app
 
-COPY package.json npm-shrinkwrap.json bower.json .
+COPY package.json npm-shrinkwrap.json bower.json .bowerrc .
 RUN npm install
 COPY . .
 
