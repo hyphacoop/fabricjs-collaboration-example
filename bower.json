@@ -8,7 +8,6 @@
     "components"
   ],
   "dependencies": {
-    "bootstrap": "~3.3.5",
     "fabric.js": "fabric#~1.7.22",
     "font-awesome": "~4.4.0"
   }
