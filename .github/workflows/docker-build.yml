@@ -34,7 +34,9 @@ jobs:
         run: docker-compose up --detach
 
       - name: Confirm app index.html served
-        run: curl --silent localhost:3000 | grep 'FabricJS Collaboration Example'
+        run: |
+          sleep 1s
+          curl --silent --verbose localhost:3000 | grep 'FabricJS Collaboration Example'
 
       # Allows SSH access into CI environment for up to 1h.
       # Use `touch ~/continue` with session to end each one.
