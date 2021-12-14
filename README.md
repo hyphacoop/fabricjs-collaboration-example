@@ -24,7 +24,7 @@ be used to support an in-person facilitated activity:
 - [ ] Facilitator will be able to click a button to have all attendee preferences instantly submitted based on proximity to zones.
 - [ ] Polis visualization will be visible on the page.
 - [ ] Participants will be able to authenticate with a login provider.
-- [ ] Only a participant will be able to move their own avatar.
+- [x] Only a participant will be able to move their own avatar.
 - [ ] Participants will be able to log in later and continue participating individually.
 
    [app]: https://polis-irl.herokuapp.com/

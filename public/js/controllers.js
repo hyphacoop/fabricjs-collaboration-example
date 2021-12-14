@@ -278,6 +278,9 @@ angular.module('fabricApp.controllers', [])
                     oImg.lockRotation = true;
                     oImg.hasBorders = false;
                     oImg.hasControls = false;
+                    // For own object, allow selection and proper cursor.
+                    oImg.selectable = true;
+                    oImg.hoverCursor = 'move';
 
                     socketFactory.emit('addUserMarker', {
                         username: username,
@@ -292,7 +295,7 @@ angular.module('fabricApp.controllers', [])
             })
     };
 
-    // Triggered when...
+    // Triggered when adding user from socketio stream.
     homeCtrl.onAddUserMarker = function(data) {
         fetch(`https://api.github.com/users/${data.username}`)
             .then(res => res.json())
@@ -310,6 +313,9 @@ angular.module('fabricApp.controllers', [])
                     oImg.lockRotation = true;
                     oImg.hasBorders = false;
                     oImg.hasControls = false;
+                    // For other users' markers, disable selection.
+                    oImg.selectable = false;
+                    oImg.hoverCursor = 'default';
 
                     $scope.objList.push(oImg);
                     $scope.canvas.add(oImg);
