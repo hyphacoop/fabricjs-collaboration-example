@@ -8,8 +8,8 @@ const CSS = [
 ];
 
 const JS = [
-  'socket.io-client/dist/socket.io.slim.js',
-  'socket.io-client/dist/socket.io.slim.js.map',
+  'socket.io-client/dist/socket.io.min.js',
+  'socket.io-client/dist/socket.io.min.js.map',
   'fabric/dist/fabric.min.js',
   'angular/angular.min.js',
   'angular/angular.min.js.map',

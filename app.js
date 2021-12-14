@@ -20,7 +20,7 @@ var routes = require('./routes');
 var app = module.exports = express();
 var restApi = require('./routes/restapi')(app);
 var server = require('http').createServer(app);
-var io = require('socket.io').listen(server);
+var io = require('socket.io')(server);
 
 /**
  * Configuration
