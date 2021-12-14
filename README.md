@@ -16,8 +16,8 @@ A demo to show how Polis conversations might augment in-person meetings.
 The purpose of this proof-of-concept app will be to demonstrate how Polis might
 be used to support an in-person facilitated activity:
 
-- [ ] Participants will be able to identity themselves with a social handle (e.g., GitHub username).
-- [ ] An avatar will appear on the board corresponding to participant's avatar on that network.
+- [x] Participants will be able to identity themselves with a social handle (e.g., GitHub username).
+- [x] An avatar will appear on the board corresponding to participant's avatar on that network.
 - [x] Draggable markers on a collaborative canvas will represent moving around a room.
 - [ ] Facilitator will be able to select and show statements from a Polis conversation.
 - [x] Moving closer to specific zones will signify to others whether you agree/disagree/pass.

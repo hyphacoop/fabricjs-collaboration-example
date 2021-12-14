@@ -57,10 +57,10 @@ module.exports = function (io) {
 
         });
 
-        socket.on('addRectangle', function (value) {
+        socket.on('addUserMarker', function (value) {
 
             //send object:stoppedModifying to everyone except the sender
-            socket.broadcast.emit('addRectangle', value);
+            socket.broadcast.emit('addUserMarker', value);
 
         });
 

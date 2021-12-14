@@ -201,7 +201,7 @@ angular.module('fabricApp.controllers', [])
         //register socket events
         socketFactory.on('object:modifying', this.onObjectModifying);
         socketFactory.on('object:stoppedModifying', this.onObjectStoppedModifying);
-        socketFactory.on('addRectangle', this.onAddRectangle);
+        socketFactory.on('addUserMarker', this.onAddUserMarker);
 
         socketFactory.on('users', this.setUsers);
     };
@@ -218,10 +218,10 @@ angular.module('fabricApp.controllers', [])
             homeCtrl.dragMouseMove(event);
         });
 
-        homeCtrl.addRectangle = $('#addRectangle');
-        homeCtrl.addRectangle.on('mousedown', function(event) {
+        homeCtrl.addUserMarker = $('#addUserMarker');
+        homeCtrl.addUserMarker.on('mousedown', function(event) {
             homeCtrl.lockDrag = true;
-            homeCtrl.dragObject = $('<div class="addRectangle">🆕</div>');
+            homeCtrl.dragObject = $('<div class="addUserMarker">🆕</div>');
             homeCtrl.dragObject.css('position', 'fixed');
             homeCtrl.dragObject.css('top', event.clientY);
             homeCtrl.dragObject.css('left', event.clientX);
@@ -235,7 +235,7 @@ angular.module('fabricApp.controllers', [])
         homeCtrl.lockDrag = false;
         if (typeof homeCtrl.dragObject !== 'undefined') {
             homeCtrl.dragObject.remove();
-            homeCtrl.addNewRectangle(event);
+            homeCtrl.addNewUserMarker(event);
             homeCtrl.dragObject = undefined;
         }
     };
@@ -249,7 +249,8 @@ angular.module('fabricApp.controllers', [])
         }
     };
 
-    homeCtrl.addNewRectangle = function(event) {
+    // Triggered when user creates new marker locally.
+    homeCtrl.addNewUserMarker = function(event) {
 
         var left, top, id;
 
@@ -261,50 +262,60 @@ angular.module('fabricApp.controllers', [])
         console.log(top);
 
         var username = commonData.Name;
-        fabric.Image.fromURL(`https://robohash.org/${username}.png?set=set4&size=50x50`, function(oImg) {
-            oImg.left = left;
-            oImg.top = +top;
-            oImg.originX = 'center';
-            oImg.originY = 'center';
-            oImg.id = id;
+        fetch(`https://api.github.com/users/${username}`)
+            .then(res => res.json())
+            .then(githubUser => {
+                var avatarUrl = `${githubUser?.avatar_url}&s=50`;
+                fabric.Image.fromURL(avatarUrl, function(oImg) {
+                    oImg.left = left;
+                    oImg.top = +top;
+                    oImg.originX = 'center';
+                    oImg.originY = 'center';
+                    oImg.id = id;
 
-            oImg.lockScalingY = true;
-            oImg.lockScalingX = true;
-            oImg.lockRotation = true;
-            oImg.hasBorders = false;
-            oImg.hasControls = false;
+                    oImg.lockScalingY = true;
+                    oImg.lockScalingX = true;
+                    oImg.lockRotation = true;
+                    oImg.hasBorders = false;
+                    oImg.hasControls = false;
 
-            socketFactory.emit('addRectangle', {
-                username: username,
-                left: left,
-                top: +top,
-                id: id
-            });
-            $scope.objList.push(oImg);
-            $scope.canvas.add(oImg);
-            $scope.canvas.renderAll();
-        });
-
+                    socketFactory.emit('addUserMarker', {
+                        username: username,
+                        left: left,
+                        top: +top,
+                        id: id
+                    });
+                    $scope.objList.push(oImg);
+                    $scope.canvas.add(oImg);
+                    $scope.canvas.renderAll();
+                });
+            })
     };
 
-    homeCtrl.onAddRectangle = function(data) {
-        fabric.Image.fromURL(`https://robohash.org/${data.username}.png?set=set4&size=50x50`, function(oImg) {
-            oImg.left = data.left;
-            oImg.top = data.top;
-            oImg.originX = 'center';
-            oImg.originY = 'center';
-            oImg.id = data.id;
+    // Triggered when...
+    homeCtrl.onAddUserMarker = function(data) {
+        fetch(`https://api.github.com/users/${data.username}`)
+            .then(res => res.json())
+            .then(githubUser => {
+                var avatarUrl = `${githubUser?.avatar_url}&s=50`;
+                fabric.Image.fromURL(avatarUrl, function(oImg) {
+                    oImg.left = data.left;
+                    oImg.top = data.top;
+                    oImg.originX = 'center';
+                    oImg.originY = 'center';
+                    oImg.id = data.id;
 
-            oImg.lockScalingY = true;
-            oImg.lockScalingX = true;
-            oImg.lockRotation = true;
-            oImg.hasBorders = false;
-            oImg.hasControls = false;
+                    oImg.lockScalingY = true;
+                    oImg.lockScalingX = true;
+                    oImg.lockRotation = true;
+                    oImg.hasBorders = false;
+                    oImg.hasControls = false;
 
-            $scope.objList.push(oImg);
-            $scope.canvas.add(oImg);
-            $scope.canvas.renderAll();
-        });
+                    $scope.objList.push(oImg);
+                    $scope.canvas.add(oImg);
+                    $scope.canvas.renderAll();
+                });
+            })
     };
 
     /**
@@ -324,7 +335,7 @@ angular.module('fabricApp.controllers', [])
             homeCtrl.lockDrag = false;
             if (typeof homeCtrl.dragObject !== 'undefined') {
                 homeCtrl.dragObject.remove();
-                homeCtrl.addNewRectangle(event);
+                homeCtrl.addNewUserMarker(event);
                 homeCtrl.dragObject = undefined;
             }
         }

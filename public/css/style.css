@@ -426,7 +426,7 @@ footer.main-footer a.social > i {
 }
 
 
-#addRectangle, .addRectangle {
+#addUserMarker, .addUserMarker {
     cursor: all-scroll;
     padding: 20px;
     font-size: 50px;
