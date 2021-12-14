@@ -1,6 +1,7 @@
 const CSS = [
-  //'font-awesome/css/font-awesome.min.css',
   'bootstrap/dist/css/bootstrap.min.css',
+  'font-awesome/css/*.min.css',
+  'font-awesome/fonts/*',
   'bootstrap/dist/css/bootstrap-theme.min.css',
 ];
 

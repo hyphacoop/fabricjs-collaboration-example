@@ -13,11 +13,11 @@
     "angular-route": "1.4.7",
     "body-parser": "^1.14.1",
     "bootstrap": "3.3.5",
-    "bower": "^1.6.5",
     "errorhandler": "^1.4.2",
     "express": "^4.13.3",
     "express-handlebars": "^2.0.1",
     "fabric": "https://github.com/fabricjs/fabric.js/archive/refs/tags/1.7.22.tar.gz",
+    "font-awesome": "^4.4.0",
     "jquery": "3.6.0",
     "method-override": "^2.3.5",
     "morgan": "^1.6.1",
@@ -29,7 +29,7 @@
     "node": "4.2.1"
   },
   "scripts": {
-    "build": "npm run build:dev && bower install",
+    "build": "npm run build:dev",
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production"
   },

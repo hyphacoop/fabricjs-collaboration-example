@@ -10,7 +10,7 @@ RUN addgroup --system app \
 
 USER app
 WORKDIR /app
-COPY --chown=app:app package.json package-lock.json bower.json .bowerrc .
+COPY --chown=app:app package.json package-lock.json .
 RUN npm ci
 COPY --chown=app:app . .
 RUN npm run build

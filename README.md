@@ -34,7 +34,7 @@ consuming visual attention.
 - Javascript
   - Angular
   - FabricJS
-  - BowerJS
+  - Webpack
 - Docker
   - Docker Compose
 - GitHub Actions
