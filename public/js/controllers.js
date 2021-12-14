@@ -101,6 +101,17 @@ angular.module('fabricApp.controllers', [])
                 selectable: false,
                 id: 0
             }),
+            new fabric.Text('Agree', {
+                left: 100,
+                top: 120,
+                fill: '#ffffff',
+                fontSize: 16,
+                fontFamily: 'Oxygen',
+                originX: 'center',
+                originY: 'center',
+                selectable: false,
+                id: 1
+            }),
 
             new fabric.Rect({
                 left: 520,
@@ -111,7 +122,18 @@ angular.module('fabricApp.controllers', [])
                 originX: 'center',
                 originY: 'center',
                 selectable: false,
-                id: 1
+                id: 2
+            }),
+            new fabric.Text('Disagree', {
+                left: 520,
+                top: 120,
+                fill: '#ffffff',
+                fontSize: 16,
+                fontFamily: 'Oxygen',
+                originX: 'center',
+                originY: 'center',
+                selectable: false,
+                id: 3
             }),
             
             new fabric.Triangle({
@@ -123,17 +145,19 @@ angular.module('fabricApp.controllers', [])
                 originX: 'center',
                 originY: 'center',
                 selectable: false,
-                id: 2
+                id: 4
             }),
-            new fabric.Text('Everything Responsive', {
-                left: 300, 
-                top: 300,
-                fill: '#f39c12',
+            new fabric.Text('Pass', {
+                left: 340,
+                top: 420,
+                fill: '#ffffff',
+                fontSize: 16,
                 fontFamily: 'Oxygen',
                 originX: 'center',
                 originY: 'center',
-                id: 3
-            })
+                selectable: false,
+                id: 5
+            }),
         ];
         
         //add all objects to the canvas
@@ -147,7 +171,7 @@ angular.module('fabricApp.controllers', [])
             oImg.top = 120;
             oImg.originX = 'center';
             oImg.originY = 'center';
-            oImg.id = 4;
+            oImg.id = 6;
 
             oImg.lockScalingY = true;
             oImg.lockScalingX = true;
