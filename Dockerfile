@@ -1,4 +1,4 @@
-FROM node:14.18.2-alpine
+FROM node:16.13.1-alpine
 
 RUN apk update \
   && apk add --no-cache --virtual .build-deps git
