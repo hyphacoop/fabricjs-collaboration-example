@@ -99,6 +99,7 @@ angular.module('fabricApp.controllers', [])
                 originX: 'center',
                 originY: 'center',
                 selectable: false,
+                hoverCursor: 'default',
                 id: 0
             }),
             new fabric.Text('Agree', {
@@ -110,6 +111,7 @@ angular.module('fabricApp.controllers', [])
                 originX: 'center',
                 originY: 'center',
                 selectable: false,
+                hoverCursor: 'default',
                 id: 1
             }),
 
@@ -122,6 +124,7 @@ angular.module('fabricApp.controllers', [])
                 originX: 'center',
                 originY: 'center',
                 selectable: false,
+                hoverCursor: 'default',
                 id: 2
             }),
             new fabric.Text('Disagree', {
@@ -133,6 +136,7 @@ angular.module('fabricApp.controllers', [])
                 originX: 'center',
                 originY: 'center',
                 selectable: false,
+                hoverCursor: 'default',
                 id: 3
             }),
             
@@ -145,6 +149,7 @@ angular.module('fabricApp.controllers', [])
                 originX: 'center',
                 originY: 'center',
                 selectable: false,
+                hoverCursor: 'default',
                 id: 4
             }),
             new fabric.Text('Pass', {
@@ -156,6 +161,7 @@ angular.module('fabricApp.controllers', [])
                 originX: 'center',
                 originY: 'center',
                 selectable: false,
+                hoverCursor: 'default',
                 id: 5
             }),
         ];
