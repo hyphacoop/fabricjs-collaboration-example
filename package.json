@@ -17,6 +17,7 @@
     "errorhandler": "^1.4.2",
     "express": "^4.13.3",
     "express-handlebars": "^2.0.1",
+    "fabric": "https://github.com/fabricjs/fabric.js/archive/refs/tags/1.7.22.tar.gz",
     "jquery": "3.6.0",
     "method-override": "^2.3.5",
     "morgan": "^1.6.1",
