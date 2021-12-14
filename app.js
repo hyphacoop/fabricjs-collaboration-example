@@ -10,7 +10,7 @@ var express = require('express'),
     methodOverride = require('method-override'),
     serveStatic = require('serve-static'),
     errorhandler = require('errorhandler'),
-    exphbs  = require('express-handlebars'),
+    exphbs  = require('express-handlebars').engine,
     http = require('http'),
     path = require('path');
 
