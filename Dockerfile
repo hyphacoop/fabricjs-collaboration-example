@@ -10,9 +10,9 @@ RUN addgroup --system app \
 
 USER app
 WORKDIR /app
-COPY --chown=app:app package.json package-lock.json .
+COPY --chown=app:app package.json package-lock.json ./
 RUN npm ci
-COPY --chown=app:app . .
+COPY --chown=app:app . ./
 RUN npm run build
 
 USER root
