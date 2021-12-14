@@ -1,0 +1,20 @@
+name: "Heroku deploy"
+on:
+  push:
+    branches:
+    - polis-demo
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Build, Push and Deploy to Heroku
+        uses: jctaveras/heroku-deploy@v2.1.3
+        with:
+          email: ${{ secrets.HEROKU_EMAIL }}
+          api_key: ${{ secrets.HEROKU_API_KEY }}
+          app_name: polis-irl
+          dockerfile_path: ''
