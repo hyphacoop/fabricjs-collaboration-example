@@ -2,7 +2,9 @@ name: "Heroku deploy"
 on:
   push:
     branches:
-    - polis-demo
+      - polis-demo
+    paths-ignore:
+      - '**/*.md'
 
 jobs:
   deploy:
