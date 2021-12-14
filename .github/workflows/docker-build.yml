@@ -36,7 +36,7 @@ jobs:
       - name: Confirm app index.html served
         run: |
           sleep 1s
-          curl --silent --verbose localhost:3000 | grep 'FabricJS Collaboration Example'
+          curl --silent --verbose localhost:3000 | grep 'Polis IRL Simulator'
 
       # Allows SSH access into CI environment for up to 1h.
       # Use `touch ~/continue` with session to end each one.
