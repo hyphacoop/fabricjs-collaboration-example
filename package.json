@@ -16,7 +16,7 @@
     "errorhandler": "^1.4.2",
     "express": "^4.13.3",
     "express-handlebars": "^6.0.0",
-    "fabric": "^3.0.0",
+    "fabric": "^4.0.0",
     "font-awesome": "^4.4.0",
     "jquery": "3.6.0",
     "method-override": "^2.3.5",
