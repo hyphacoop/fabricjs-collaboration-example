@@ -33,14 +33,6 @@ module.exports = function (app) {
                 top: 0,
                 id: 2
             },
-            obj3 :
-            {
-                type: 'image',
-                url: 'https://robohash.org/user.png?set=set4&size=50x50',
-                left: 460,
-                top: 120,
-                id: 3
-            },
             obj4 :
             {
                 type: 'text',

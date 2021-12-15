@@ -171,23 +171,6 @@ angular.module('fabricApp.controllers', [])
             $scope.canvas.add(obj);
         });
         
-        //add image from url
-        fabric.Image.fromURL('https://robohash.org/user.png?set=set4&size=50x50', function(oImg) {
-            oImg.left = 460;
-            oImg.top = 120;
-            oImg.originX = 'center';
-            oImg.originY = 'center';
-            oImg.id = 6;
-
-            oImg.lockScalingY = true;
-            oImg.lockScalingX = true;
-            oImg.lockRotation = true;
-            oImg.hasBorders = false;
-            oImg.hasControls = false;
-
-            $scope.objList.push(oImg);
-            $scope.canvas.add(oImg);
-        });
 
         homeCtrl.initDrag();
 
