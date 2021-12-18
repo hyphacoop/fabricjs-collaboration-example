@@ -21,4 +21,4 @@ RUN apk del .build-deps
 EXPOSE 3000
 
 USER app
-CMD node app.js
+CMD node server/app.js

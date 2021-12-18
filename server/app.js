@@ -44,7 +44,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 //Lets us use HTTP verbs such as PUT or DELETE in places where the client doesn't support it.
 app.use(methodOverride());
-app.use(serveStatic(path.join(__dirname, 'public')));
+app.use(serveStatic(path.join(__dirname, '..', 'public')));
 
 //development
 if (app.get('env') === 'development') {
