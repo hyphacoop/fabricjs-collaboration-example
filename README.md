@@ -9,7 +9,7 @@
 
 :link: [`polis-irl.herokuapp.com`][app]
 
-A demo to show how Polis conversations might augment in-person meetings.
+A demo to show how Polis conversations might augment in-person meetings. (Inspired by [Resilient Conversations workshop format](https://docs.google.com/document/d/1sc4XtrknwEHZvj041Nu4oYIQu_guOlHov_-53evJFkg/edit).)
 
 **Warning: Work in progress.**
 
